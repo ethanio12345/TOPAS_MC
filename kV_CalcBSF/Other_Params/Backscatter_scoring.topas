@@ -1,0 +1,6 @@
+
+s:Sc/Backscatter/Quantity                  = "DoseToMedium"
+s:Sc/Backscatter/Component                 = "Detector"
+b:Sc/Backscatter/OutputToConsole           = "TRUE"
+s:Sc/Backscatter/IfOutputFileAlreadyExists = "Overwrite"
+sv:Sc/Backscatter/Report = 2 "Sum" "Standard_Deviation"

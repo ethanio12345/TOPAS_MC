@@ -1,0 +1,7 @@
+d:So/Xray/BeamAngularCutoffX       = 9.441537008074241 deg
+d:So/Xray/BeamAngularCutoffY       = 9.441537008074241 deg
+
+d:So/Xray/BeamPositionCutoffX = 5 mm # X extent of position (if Flat or Gaussian)
+d:So/Xray/BeamPositionCutoffY = 5 mm # Y extent of position (if Flat or Gaussian)
+
+

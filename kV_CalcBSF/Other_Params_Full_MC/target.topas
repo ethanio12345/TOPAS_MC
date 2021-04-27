@@ -1,0 +1,17 @@
+s:Ge/Target/Type     = "TsBox"
+s:Ge/Target/Parent   = "World"
+s:Ge/Target/Material = "G4_W"
+d:Ge/Target/HLX      = 5 cm
+d:Ge/Target/HLY      = 5 cm
+d:Ge/Target/HLZ      = 5 cm
+d:Ge/Target/RotY     = -30 deg
+
+d:Ge/Target/TransX   = -4.33 cm 
+d:Ge/Target/TransY   = 0 cm
+d:Ge/Target/TransZ   =  Ge/BeamPosition/TransZ + 2.5 cm
+
+
+s:Ge/Target/Color    = "grey"
+s:Ge/Target/DrawingStyle = "Wireframe"
+
+

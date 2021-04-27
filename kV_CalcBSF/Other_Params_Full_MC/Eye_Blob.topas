@@ -1,0 +1,10 @@
+s:Ge/EyeBlob/Type     = "TsSphere"
+s:Ge/EyeBlob/Parent   = "World"
+s:Ge/EyeBlob/Material = "G4_WATER"
+d:Ge/EyeBlob/RMin     = 0.0 cm
+d:Ge/EyeBlob/RMax     = 5. mm
+d:Ge/EyeBlob/TransZ   = 0 cm
+d:Ge/EyeBlob/STheta     = 0. deg
+d:Ge/EyeBlob/DTheta     = 90. deg
+s:Ge/EyeBlob/Color    = "blue"
+s:Ge/EyeBlob/DrawingStyle = "Wireframe"

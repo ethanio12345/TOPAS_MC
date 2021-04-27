@@ -1,0 +1,13 @@
+s:Ge/Phantom/Type     = "TsBox"
+s:Ge/Phantom/Parent   = "World"
+s:Ge/Phantom/Material = "G4_WATER"
+d:Ge/Phantom/HLX      = 30 cm
+d:Ge/Phantom/HLY      = 30 cm
+d:Ge/Phantom/HLZ      = 30 cm
+d:Ge/Phantom/TransX   = 0 cm
+d:Ge/Phantom/TransY   = 0 cm
+d:Ge/Phantom/TransZ   = -1 * Ge/Phantom/HLZ cm
+
+
+s:Ge/Phantom/Color    = "blue"
+s:Ge/Phantom/DrawingStyle = "Wireframe"

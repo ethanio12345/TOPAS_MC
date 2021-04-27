@@ -1,0 +1,10 @@
+s:Sc/Energy/Quantity = "EnergyDeposit"
+s:Sc/Energy/Component = "Detector"
+b:Sc/Energy/OutputToConsole = "TRUE"
+s:Sc/Energy/IfOutputFileAlreadyExists = "Overwrite"
+i:Sc/Energy/EBins = 200
+d:Sc/Energy/EBinMax = 0.200 MeV
+i:Sc/Energy/HistogramBins = 200
+d:Sc/Energy/HistogramMin = 0. MeV
+d:Sc/Energy/HistogramMax = 0.200 MeV
+s:Sc/Energy/OutputType = "csv"

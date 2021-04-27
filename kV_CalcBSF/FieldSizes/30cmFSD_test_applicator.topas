@@ -1,0 +1,19 @@
+# Cons
+s:Ge/DemoCons/Type                   = "G4Cons"
+s:Ge/DemoCons/Parent                 = "World"
+s:Ge/DemoCons/Material               = "Lucite"
+d:Ge/DemoCons/TransX                 = 0 cm
+d:Ge/DemoCons/TransY                 = 0 cm
+d:Ge/DemoCons/TransZ                 = 30 cm - Ge/DemoCons/HL 
+d:Ge/DemoCons/RotX                   = 0 deg
+d:Ge/DemoCons/RotY                   = 0 deg
+d:Ge/DemoCons/RotZ                   = 0 deg
+d:Ge/DemoCons/RMin2                  = 21 mm
+d:Ge/DemoCons/RMax2                  = 23 mm
+d:Ge/DemoCons/RMin1                  = 52.5 mm
+d:Ge/DemoCons/RMax1                  = 54.5 mm
+d:Ge/DemoCons/HL                     = 15 cm
+d:Ge/DemoCons/SPhi                   = 0 deg
+d:Ge/DemoCons/DPhi                   = 360 deg
+s:Ge/DemoCons/Color                  = "red"
+s:Ge/DemoCons/DrawingStyle           = "FullWireFrame"

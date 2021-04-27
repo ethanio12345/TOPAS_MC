@@ -1,0 +1,19 @@
+# Cons
+s:Ge/DemoCons/Type                   = "G4Cons"
+s:Ge/DemoCons/Parent                 = "World"
+s:Ge/DemoCons/Material               = "Air"
+d:Ge/DemoCons/TransX                 = 0 cm
+d:Ge/DemoCons/TransY                 = 0 cm
+d:Ge/DemoCons/TransZ                 = -1*Ge/DemoCons/HL cm
+d:Ge/DemoCons/RotX                   = 0 deg
+d:Ge/DemoCons/RotY                   = 0 deg
+d:Ge/DemoCons/RotZ                   = 0 deg
+d:Ge/DemoCons/RMin1                  = 5 mm
+d:Ge/DemoCons/RMax1                  = 10 mm
+d:Ge/DemoCons/RMin2                  = 20 mm
+d:Ge/DemoCons/RMax2                  = 25 mm
+d:Ge/DemoCons/HL                     = 40 mm
+d:Ge/DemoCons/SPhi                   = 0 rad
+d:Ge/DemoCons/DPhi                   = 1.34 rad
+s:Ge/DemoCons/Color                  = "red"
+s:Ge/DemoCons/DrawingStyle           = "FullWireFrame"

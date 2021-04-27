@@ -1,0 +1,13 @@
+s:Ge/Detector/Parent     = "World"
+s:Ge/Detector/Type       = "TsBox"
+s:Ge/Detector/Material  = "G4_WATER"
+d:Ge/Detector/HLX = 0.5 cm
+d:Ge/Detector/HLY = 0.5 cm
+d:Ge/Detector/HLZ = 0.5 mm
+d:Ge/Detector/TransX     = 0. cm
+d:Ge/Detector/TransY     = 0. cm
+d:Ge/Detector/TransZ     = 10 cm
+d:Ge/Detector/SPhi       = 0. deg
+d:Ge/Detector/DPhi       = 360. deg
+s:Ge/Detector/Color      = "red"
+s:Ge/Detector/DrawingStyle = "Solid"

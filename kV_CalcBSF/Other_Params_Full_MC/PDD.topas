@@ -1,0 +1,29 @@
+s:Ge/PDDCylinder/ParallelWorldName         = "PDDCyl" # Parallel to water phantom
+b:Ge/PDDCylinder/IsParallel 		    = "True"  # To allow for nesting of files and doesn't affect ``real'' world
+
+s:Ge/PDDCylinder/Parent                    = "World"
+s:Ge/PDDCylinder/Type                      = "TsCylinder"
+d:Ge/PDDCylinder/RMin                      = 0.0 cm
+d:Ge/PDDCylinder/RMax                      = 3.0 mm
+d:Ge/PDDCylinder/HL                        = 4 cm  # 8cm total, same as planning data
+d:Ge/PDDCylinder/SPhi                      = 0. deg
+d:Ge/PDDCylinder/DPhi                      = 360. deg
+d:Ge/PDDCylinder/TransX                    = 0. cm
+d:Ge/PDDCylinder/TransY                    = 0. cm
+d:Ge/PDDCylinder/TransZ                    = -1 * Ge/PDDCylinder/HL cm # Same surface as water phantom
+d:Ge/PDDCylinder/RotX                      = 0. deg
+d:Ge/PDDCylinder/RotY                      = 0. deg
+d:Ge/PDDCylinder/RotZ                      = 0. deg
+s:Ge/PDDCylinder/Color                     = "yellow"
+i:Ge/PDDCylinder/RBins                     = 1
+i:Ge/PDDCylinder/PhiBins                   = 1
+i:Ge/PDDCylinder/ZBins                     = 200
+s:Sc/PDDCylinder/Quantity                  = "DoseToMedium"
+sv:Sc/PDDCylinder/Report                   = 3 "Sum" "Histories" "Count_In_Bin"
+s:Sc/PDDCylinder/Component                 = "PDDCylinder"
+b:Sc/PDDCylinder/OutputToConsole           = "False"
+s:Sc/PDDCylinder/OutputFile = "PDDCyl"
+s:Sc/PDDCylinder/IfOutputFileAlreadyExists = "Increment"
+
+
+b:Sc/PDDCylinder/OutputAfterRun = "True"

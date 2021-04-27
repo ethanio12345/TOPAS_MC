@@ -1,0 +1,96 @@
+# Depth dose in a block of water for X-ray beam
+
+s:Ge/World/Material  = "Air"
+d:Ge/World/HLX       = 1.0 m
+d:Ge/World/HLY       = 1.0 m
+d:Ge/World/HLZ       = 1.0 m
+b:Ge/World/Invisible = "True"
+
+-------------------------------------------------------
+### Beam Conditions
+-------------------------------------------------------
+
+### FSD ###
+d:Ge/BeamPosition/TransZ = 30. cm
+
+
+s:So/Xray/Type                     = "Beam"
+s:So/Xray/Component                = "BeamPosition"
+s:So/Xray/BeamParticle             = "electron"
+
+s:So/Xray/BeamPositionDistribution = "Flat" # None, Flat or Gaussian
+s:So/Xray/BeamPositionCutoffShape = "Ellipse" # Rectangle or Ellipse (if Flat or Gaussian)
+
+s:So/Xray/BeamAngularDistribution = "Flat"
+
+### Define Filter 
+
+includeFile = /home/ebutson/TOPAS/kV_CalcBSF/Filters/test_filters/200kVp_30cmFSD_3mmBe_2mmCu_0.3mmAlFilter.topas
+
+### Define beam spot size angular emisson
+
+includeFile = /home/ebutson/TOPAS/kV_CalcBSF/FieldSizes/10cmField.topas
+
+### Build applicator
+includeFile = /home/ebutson/TOPAS/kV_CalcBSF/FieldSizes/30cmFSD_test_applicator.topas
+
+-------------------------------------------------------
+### Phantom
+-------------------------------------------------------
+
+
+#includeFile = /home/ebutson/TOPAS/kV_CalcBSF/Other_Params/Eye_Blob.topas
+includeFile = /home/ebutson/TOPAS/kV_CalcBSF/Other_Params/Phantom.topas
+
+
+
+-------------------------------------------------------
+### Back Scatter Detector - Currently water
+-------------------------------------------------------
+
+#includeFile = /home/ebutson/TOPAS/kV_CalcBSF/Other_Params/BSF_Detector.topas
+
+#includeFile = /home/ebutson/TOPAS/kV_CalcBSF/Other_Params/Backscatter_scoring.topas
+#includeFile = /home/ebutson/TOPAS/kV_CalcBSF/Other_Params/Energy_scorer.topas
+
+includeFile = /home/ebutson/TOPAS/kV_CalcBSF/Other_Params/PDD.topas
+
+
+-------------------------------------------------------
+### Visualisation
+-------------------------------------------------------
+
+s:Gr/ViewA/Type                             = "OpenGL"
+i:Gr/ViewA/WindowSizeX                      = 1700
+i:Gr/ViewA/WindowSizeY                      = 900
+d:Gr/ViewA/Theta                            = 90 deg
+d:Gr/ViewA/Phi                              = 0 deg
+s:Gr/ViewA/Projection                       = "Perspective"
+d:Gr/ViewA/PerspectiveAngle                 = 30 deg
+u:Gr/ViewA/Zoom                             = 1
+b:Gr/ViewA/HiddenLineRemovalForTrajectories = "True"
+b:Gr/Enable = "False"
+#b:Gr/ViewA/CopyOpenGLToPDF = "True"
+
+Ts/UseQt = "False"
+
+
+-------------------------------------------------------
+### Control and physics
+-------------------------------------------------------
+
+b:Sc/MyScorer/PreCalculateStoppingPowerRatios = "True"
+i:Ts/Seed = 5
+
+i:Tf/NumberOfSequentialTimes = 100
+i:So/Xray/NumberOfHistoriesInRun   = 50000000
+
+i:Ts/ShowHistoryCountAtInterval = 5000000
+
+i:Ts/NumberOfThreads = 0 # 0 indicates all available threads
+
+b:Ts/PauseBeforeQuit = "False"
+
+#sv:Ph/MySource/Modules = 1 "g4em-standard_opt3"
+sv:Ph/MySource/Modules = 1 "g4em-penelope"
+b:Ph/ListProcesses = "False"

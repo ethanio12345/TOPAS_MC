@@ -1,0 +1,35 @@
+s:Ge/BeWindow/Type     = "TsBox"
+s:Ge/BeWindow/Parent   = "World"
+s:Ge/BeWindow/Material = "G4_Be"
+d:Ge/BeWindow/HLX      = 5 cm
+d:Ge/BeWindow/HLY      = 5 cm
+d:Ge/BeWindow/HLZ      = 1.5 mm
+
+d:Ge/BeWindow/TransZ   =  30 cm - Ge/BeWindow/HLZ
+s:Ge/BeWindow/Color    = "yellow"
+s:Ge/BeWindow/DrawingStyle = "Wireframe"
+
+d:end_of_be = Ge/BeWindow/TransZ - Ge/BeWindow/HLZ cm
+
+s:Ge/CuWindow/Type     = "TsBox"
+s:Ge/CuWindow/Parent   = "World"
+s:Ge/CuWindow/Material = "G4_Cu"
+d:Ge/CuWindow/HLX      = 5 cm
+d:Ge/CuWindow/HLY      = 5 cm
+d:Ge/CuWindow/HLZ      = 1 mm
+
+d:Ge/CuWindow/TransZ   =  end_of_be - Ge/CuWindow/HLZ cm
+s:Ge/CuWindow/Color    = "blue"
+s:Ge/CuWindow/DrawingStyle = "Wireframe"
+
+d:end_of_cu = Ge/CuWindow/TransZ - Ge/CuWindow/HLZ cm
+
+s:Ge/AlWindow/Type     = "TsBox"
+s:Ge/AlWindow/Parent   = "World"
+s:Ge/AlWindow/Material = "G4_Al"
+d:Ge/AlWindow/HLX      = 5 cm
+d:Ge/AlWindow/HLY      = 5 cm
+d:Ge/AlWindow/HLZ      = 0.15 mm
+d:Ge/AlWindow/TransZ   =  end_of_cu - Ge/AlWindow/HLZ cm
+s:Ge/AlWindow/Color    = "grey"
+s:Ge/AlWindow/DrawingStyle = "Wireframe"

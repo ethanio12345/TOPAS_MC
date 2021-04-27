@@ -1,0 +1,19 @@
+s:So/Xray/Type = "Beam" #
+s:So/Xray/Component = "BeamPosition"
+s:So/Xray/BeamParticle = "e-"
+d:So/Xray/BeamEnergy = 200 keV
+u:So/Xray/BeamEnergySpread = 0
+s:So/Xray/BeamShape = "Ellipse" # Point, Ellipse, Rectangle or Isotropic
+
+s:So/Xray/BeamPositionDistribution = "Flat" # None, Flat or Gaussian
+s:So/Xray/BeamPositionCutoffShape = "Ellipse" # Rectangle or Ellipse (if Flat or Gaussian)
+d:So/Xray/BeamPositionCutoffX = 0.3 cm # X extent of position (if Flat or Gaussian)
+d:So/Xray/BeamPositionCutoffY = 0.3 cm # Y extent of position (if Flat or Gaussian)
+d:So/Xray/BeamPositionSpreadX = 0.065 cm # distribution (if Gaussian)
+d:So/Xray/BeamPositionSpreadY = 0.065 cm # distribution (if Gaussian)
+
+s:So/Xray/BeamAngularDistribution = "None" # None, Flat or Gaussian
+d:So/Xray/BeamAngularCutoffX = 1. deg # X cutoff of angular distrib (if Flat or Gaussian)
+d:So/Xray/BeamAngularCutoffY = 1. deg # Y cutoff of angular distrib (if Flat or Gaussian)
+d:So/Xray/BeamAngularSpreadX = 0.0032 rad # X angular distribution (if Gaussian)
+d:So/Xray/BeamAngularSpreadY = 0.0032 rad # Y angular distribution (if Gaussian)
