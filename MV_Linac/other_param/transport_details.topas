@@ -1,0 +1,9 @@
+
+
+#s:Ph/MySource/Type = "QGSP_BERT_EMV"
+#s:Ph/MySource/Type = "QGSP_BIC_HP"
+#sv:Ph/MySource/Modules = 1 "g4em-standard_opt1"
+#sv:Ph/MySource/Modules = 1 "g4em-standard_opt3"
+sv:Ph/MySource/Modules = 1 "g4em-standard_opt0"
+
+

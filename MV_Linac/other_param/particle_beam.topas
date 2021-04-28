@@ -1,0 +1,19 @@
+s:So/MySource/Type = "Beam" #
+s:So/MySource/Component = "BeamPosition"
+s:So/MySource/BeamParticle = "e-"
+d:So/MySource/BeamEnergy = 6.0 MeV
+u:So/MySource/BeamEnergySpread = 0
+s:So/MySource/BeamShape = "Ellipse" # Point, Ellipse, Rectangle or Isotropic
+
+s:So/MySource/BeamPositionDistribution = "Gaussian" # None, Flat or Gaussian
+s:So/MySource/BeamPositionCutoffShape = "Ellipse" # Rectangle or Ellipse (if Flat or Gaussian)
+d:So/MySource/BeamPositionCutoffX = 0.3 cm # X extent of position (if Flat or Gaussian)
+d:So/MySource/BeamPositionCutoffY = 0.3 cm # Y extent of position (if Flat or Gaussian)
+d:So/MySource/BeamPositionSpreadX = 0.065 cm # distribution (if Gaussian)
+d:So/MySource/BeamPositionSpreadY = 0.065 cm # distribution (if Gaussian)
+
+s:So/MySource/BeamAngularDistribution = "None" # None, Flat or Gaussian
+d:So/MySource/BeamAngularCutoffX = 1. deg # X cutoff of angular distrib (if Flat or Gaussian)
+d:So/MySource/BeamAngularCutoffY = 1. deg # Y cutoff of angular distrib (if Flat or Gaussian)
+d:So/MySource/BeamAngularSpreadX = 0.0032 rad # X angular distribution (if Gaussian)
+d:So/MySource/BeamAngularSpreadY = 0.0032 rad # Y angular distribution (if Gaussian)

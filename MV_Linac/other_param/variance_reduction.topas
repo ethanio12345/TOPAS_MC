@@ -1,0 +1,40 @@
+#Secondary biasing For TargetRegion
+
+b:Vr/UseVarianceReduction = "True"
+b:Vr/ParticleSplit/Active = "True"
+s:Vr/ParticleSplit/Type   = "SecondaryBiasing"
+
+# The secondary particles produced in this process will be split  100 times if their energies are below of 6 MeV
+
+bv:Vr/ParticleSplit/Symmetric                = 1 "true"
+
+sv:Vr/ParticleSplit/ForRegion/TargetRegion/processesNamed   = 2 "eBrem" "compt"
+uv:Vr/ParticleSplit/ForRegion/TargetRegion/SplitNumber      = 2   100 10
+dv:Vr/ParticleSplit/ForRegion/TargetRegion/MaximumEnergies  = 2   6.0 0.511  MeV
+
+# Component that holds the reference frame for Directional split filter
+
+s:Vr/ParticleSplit/ReferenceComponent = "World"
+dv:Vr/ParticleSplit/ForRegion/TargetRegion/DirectionalSplitLimits = 2 98 98   cm
+dv:Vr/ParticleSplit/ForRegion/TargetRegion/DirectionalSplitRadius = 2 1  1  cm
+
+
+### Secondary Biasing for PrimaryCollimator
+
+b:Vr/ParticleSplit2/Active = "False"
+s:Vr/ParticleSplit2/Type   = "SecondaryBiasing"
+
+# The secondary particles produced in this process will be split  100 times if their energies are below of 6 MeV
+
+bv:Vr/ParticleSplit2/Symmetric                = 1 "true"
+sv:Vr/ParticleSplit2/ForRegion/PrimaryCollimator/processesNamed   = 2 "eBrem" "compt"
+uv:Vr/ParticleSplit2/ForRegion/PrimaryCollimator/SplitNumber      = 2   100 10
+dv:Vr/ParticleSplit2/ForRegion/PrimaryCollimator/MaximumEnergies  = 2   6.0 0.511  MeV
+
+# Component that holds the reference frame for Directional split filter
+
+s:Vr/ParticleSplit2/ReferenceComponent = "World"
+dv:Vr/ParticleSplit2/ForRegion/PrimaryCollimator/DirectionalSplitLimits = 2 93  93   cm
+dv:Vr/ParticleSplit2/ForRegion/PrimaryCollimator/DirectionalSplitRadius = 2 2.5 2.5  cm
+
+

@@ -1,0 +1,47 @@
+s:Ge/monitorcu1/Parent			= "World"
+s:Ge/monitorcu1/Type			= "TsCylinder"
+s:Ge/monitorcu1/Material                = "G4_Cu"
+d:Ge/monitorcu1/RMin                    = 0.0 cm
+d:Ge/monitorcu1/RMax                    = 6.0325 cm
+d:Ge/monitorcu1/HL                      = 0.04191 cm
+d:Ge/monitorcu1/TransX			= 0 cm
+d:Ge/monitorcu1/TransY			= 0 cm
+d:Ge/monitorcu1/TransZ			= 88.92618 cm
+s:Ge/monitorcu1/Color            	= "red"
+s:Ge/monitorcu1/DrawingStyle      	= "Wireframe"
+
+s:Ge/monitork1/Parent			= "World"
+s:Ge/monitork1/Type			= "TsCylinder"
+s:Ge/monitork1/Material                 = "Kapton"
+d:Ge/monitork1/RMin                     = 0.0 cm
+d:Ge/monitork1/RMax                     = 6.0325 cm
+d:Ge/monitork1/HL                       = 0.01905 cm
+d:Ge/monitork1/TransX			= 0 cm
+d:Ge/monitork1/TransY			= 0 cm
+d:Ge/monitork1/TransZ			= 88.86522 cm
+s:Ge/monitork1/Color            	= "blue"
+s:Ge/monitork1/DrawingStyle      	= "Wireframe"
+
+s:Ge/monitorcu2/Parent			= "World"
+s:Ge/monitorcu2/Type			= "TsCylinder"
+s:Ge/monitorcu2/Material                = "G4_Cu"
+d:Ge/monitorcu2/RMin                    = 0.0 cm
+d:Ge/monitorcu2/RMax                    = 6.0325 cm
+d:Ge/monitorcu2/HL                      = 0.04191 cm
+d:Ge/monitorcu2/TransX			= 0 cm
+d:Ge/monitorcu2/TransY			= 0 cm
+d:Ge/monitorcu2/TransZ			= 86.77 cm
+s:Ge/monitorcu2/Color            	= "red"
+s:Ge/monitorcu2/DrawingStyle      	= "Wireframe"
+
+s:Ge/monitork2/Parent			= "World"
+s:Ge/monitork2/Type			= "TsCylinder"
+s:Ge/monitork2/Material                 = "Kapton"
+d:Ge/monitork2/RMin                     = 0.0 cm
+d:Ge/monitork2/RMax                     = 6.0325 cm
+d:Ge/monitork2/HL                       = 0.01905 cm
+d:Ge/monitork2/TransX			= 0 cm
+d:Ge/monitork2/TransY			= 0 cm
+d:Ge/monitork2/TransZ			= 86.70904 cm
+s:Ge/monitork2/Color            	= "blue"
+s:Ge/monitork2/DrawingStyle      	= "Wireframe"

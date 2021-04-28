@@ -1,0 +1,17 @@
+s:Sc/PhaseSpaceAtMonChamberKap/Quantity                    = "PhaseSpace"
+b:Sc/PhaseSpaceAtMonChamberKap/OutputToConsole             = "True"
+s:Sc/PhaseSpaceAtMonChamberKap/Surface                     = "monitork2/ZMinusSurface"
+s:Sc/PhaseSpaceAtMonChamberKap/OutputType                  = "ASCII" # ASCII, Binary, Limited or ROOT
+s:Sc/PhaseSpaceAtMonChamberKap/OutputFile = "ASCIIOutput_6.0MeV_0spread"
+i:Sc/PhaseSpaceAtMonChamberKap/OutputBufferSize            = 50000
+#s:Sc/PhaseSpaceAtMonChamberKap/OnlyIncludeParticlesGoing  = "Out"
+#b:Sc/PhaseSpaceAtMonChamberKap/IncludeTOPASTime            = "True"
+#b:Sc/PhaseSpaceAtMonChamberKap/IncludeTimeOfFlight         = "True"
+#b:Sc/PhaseSpaceAtMonChamberKap/IncludeRunID                = "True"
+#b:Sc/PhaseSpaceAtMonChamberKap/IncludeEventID              = "True"
+#b:Sc/PhaseSpaceAtMonChamberKap/IncludeTrackID              = "True"
+#b:Sc/PhaseSpaceAtMonChamberKap/IncludeParentID             = "True"
+#b:Sc/PhaseSpaceAtMonChamberKap/IncludeCreatorProcess       = "True"
+#b:Sc/PhaseSpaceAtMonChamberKap/IncludeVertexInfo           = "True"
+#b:Sc/PhaseSpaceAtMonChamberKap/IncludeSeed                 = "True"
+s:Sc/PhaseSpaceAtMonChamberKap/IfOutputFileAlreadyExists   = "Increment"

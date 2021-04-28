@@ -1,0 +1,47 @@
+##################################################################
+##################################################################
+#-------------------- PRIMARY COLLIMATOR ------------------------#
+
+s:Ge/PrimaryCollimator/Parent   = "World"
+s:Ge/PrimaryCollimator/Type     = "TsBox"
+s:Ge/PrimaryCollimator/Material ="G4_W"
+d:Ge/PrimaryCollimator/HLX      = 5 cm        # Half Length
+d:Ge/PrimaryCollimator/HLY      = 5 cm
+d:Ge/PrimaryCollimator/HLZ      = 5 cm   # Half Length
+d:Ge/PrimaryCollimator/TransX   = 0.0 m
+d:Ge/PrimaryCollimator/TransY   = 0.0 m
+d:Ge/PrimaryCollimator/TransZ   = 98 cm
+d:Ge/PrimaryCollimator/RotX     = 0.0 deg
+d:Ge/PrimaryCollimator/RotY     = 0.0 deg
+d:Ge/PrimaryCollimator/RotZ     = 0.0 deg
+s:Ge/PrimaryCollimator/Color    = "brown"
+b:Ge/PrimaryCollimator/Invisible = "False"
+
+
+#----------------- Vacuum Sphere For Target----------------------#
+
+s:Ge/VacSphere/Type         = "TsSphere"
+s:Ge/VacSphere/Parent       = "PrimaryCollimator"
+s:Ge/VacSphere/Material     = "Vacuum"
+d:Ge/VacSphere/RMin         = 0. cm
+d:Ge/VacSphere/RMax         = 2. cm
+d:Ge/VacSphere/TransX       = 0. m
+d:Ge/VacSphere/TransY       = 0. m
+d:Ge/VacSphere/TransZ       = 2. cm
+s:Ge/VacSphere/DrawingStyle = "Wireframe"
+b:Ge/VacSphere/Invisible = "False"
+
+##################################################################
+#----------- VACUUM CONE INSIDE PRIMARY COLLIMATOR -------#
+
+
+
+s:Ge/VacCone/Type 			= "G4Cons"
+s:Ge/VacCone/Parent 		= "PrimaryCollimator"
+s:Ge/VacCone/Material 		= "Vacuum"
+d:Ge/VacCone/TransZ 		= -2 cm
+d:Ge/VacCone/RMax2 			= 1 cm
+d:Ge/VacCone/RMax1 			= 2.5 cm
+d:Ge/VacCone/HL 			= 3 cm
+s:Ge/VacCone/Color			= "red"
+s:Ge/VacCone/DrawingStyle 	= "FullWireFrame"

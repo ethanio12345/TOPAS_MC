@@ -1,0 +1,5 @@
+s:So/MySource/Type                            = "PhaseSpace"
+s:So/MySource/PhaseSpaceFileName              = "/home/ebutson/TOPAS/MV_Linac/output/PHSP/ASCIIOutput_5.8MeV_0spread"
+s:So/MySource/Component                       = "World"
+#i:So/MySource/PhaseSpaceMultipleUse = 100
+i:So/MySource/PhaseSpaceMultipleUse = 250

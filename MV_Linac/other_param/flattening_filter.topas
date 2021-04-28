@@ -1,0 +1,30 @@
+s:Ge/FlatteningFilter/Type = "Group"
+
+s:Ge/FlatteningFilter/Parent = "World"
+d:Ge/FlatteningFilter/TransZ = 89 cm
+
+# Inner section is implemented as a Solid Polycone
+
+s:Ge/InnerCone/Type              = "G4SPolycone"
+s:Ge/InnerCone/Parent            = "FlatteningFilter"
+s:Ge/InnerCone/Material          = "G4_Cu"
+s:Ge/InnerCone/Color             = "grey"
+s:Ge/InnerCone/DrawingStyle      = "Solid"
+dv:Ge/InnerCone/R                = 15 0 0 0.093 0.303 0.441 0.725 0.916 1.068 1.332 1.572 1.820 2.387 2.818 3.035 3.035 cm
+dv:Ge/InnerCone/Z                = 15 0 2.507 2.463 2.310 2.149 1.837 1.645 1.492 1.252 1.045 0.848 0.470 0.386 0.386 0 cm
+
+
+
+s:Ge/OuterCyl/Type              = "TsCylinder"
+s:Ge/OuterCyl/Parent            = "FlatteningFilter"
+s:Ge/OuterCyl/Material          = "G4_Cu"
+s:Ge/OuterCyl/Color             = "grey"
+s:Ge/OuterCyl/DrawingStyle      	= "Solid"
+d:Ge/OuterCyl/RMin                      = 3.035 cm
+d:Ge/OuterCyl/RMax                      = 3.497 cm
+d:Ge/OuterCyl/HL                        = 0.235 cm  # same height as phantom
+d:Ge/OuterCyl/SPhi                      = 0. deg
+d:Ge/OuterCyl/DPhi                      = 360. deg
+d:Ge/OuterCyl/TransX                    = 0. cm
+d:Ge/OuterCyl/TransY                    = 0. cm
+d:Ge/OuterCyl/TransZ                    = Ge/OuterCyl/HL cm

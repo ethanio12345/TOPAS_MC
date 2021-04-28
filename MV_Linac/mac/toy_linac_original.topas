@@ -1,0 +1,235 @@
+#-------------------- Tungsten definition -----------------------
+sv:Ma/Tungsten/Components=1 "Tungsten"
+uv:Ma/Tungsten/Fractions=1 1.0
+d:Ma/Tungsten/Density=19.3 g/cm3
+s:Ma/Tungsten/DefaultColor="indigo"
+
+#-------------------- World -----------------------------------
+s:Ge/World/Type="G4Box"
+s:Ge/World/Material="Vacuum"
+d:Ge/World/HLX=2. m # Half Length
+d:Ge/World/HLY=2. m
+d:Ge/World/HLZ=2. m
+d:Ge/World/TransX=0. m
+d:Ge/World/TransY=0. m
+d:Ge/World/TransZ=0. m
+d:Ge/World/RotX=0. deg
+d:Ge/World/RotY=0. deg
+d:Ge/World/RotZ=0. deg
+b:Ge/World/Invisible = "True"
+
+#----------------- Default Beam Position -----------------------
+s:Ge/BeamPosition/Parent="World"
+s:Ge/BeamPosition/Type="Group"
+d:Ge/BeamPosition/TransX=0. m
+d:Ge/BeamPosition/TransY=0. m
+d:Ge/BeamPosition/TransZ=Ge/World/HLZ m
+d:Ge/BeamPosition/RotX=180. deg
+d:Ge/BeamPosition/RotY=0. deg
+d:Ge/BeamPosition/RotZ=0. deg
+
+#----------------- Beam Source -----------------------
+s:So/Default/Type = "Beam" #
+s:So/Default/Component = "BeamPosition"
+s:So/Default/BeamParticle = "e-"
+d:So/Default/BeamEnergy = 6.0 MeV
+#u:So/Default/BeamEnergySpread = 0.757504
+s:So/Default/BeamShape = "Point" # Point, Ellipse, Rectangle or Isotropic
+
+##################################################################
+#-------------------- TARGET ------------------------------------#
+#----------------Tungsten section -------------------------------#
+s:Ge/TargetTungstenSection/Parent   = "World"
+s:Ge/TargetTungstenSection/Type     = "TsBox"
+s:Ge/TargetTungstenSection/Material ="Tungsten"
+d:Ge/TargetTungstenSection/HLX      = 5 cm        # Half Length
+d:Ge/TargetTungstenSection/HLY      = 5 cm
+d:Ge/TargetTungstenSection/HLZ      = 0.0508 cm   # Half Length
+d:Ge/TargetTungstenSection/TransX   = 0.0 m 
+d:Ge/TargetTungstenSection/TransY   = 0.0 m 
+d:Ge/TargetTungstenSection/TransZ   = 0.8 * Ge/World/HLZ m  
+d:Ge/TargetTungstenSection/RotX     = 0.0 deg
+d:Ge/TargetTungstenSection/RotY     = 0.0 deg
+d:Ge/TargetTungstenSection/RotZ     = 0.0 deg 
+s:Ge/TargetTungstenSection/Color    = "brown"
+#----------------Copper section -------------------------------#
+s:Ge/TargetCopperSection/Parent   = "World"
+s:Ge/TargetCopperSection/Type     = "TsBox"
+s:Ge/TargetCopperSection/Material ="Copper"
+d:Ge/TargetCopperSection/HLX      = 5 cm        # Half Length
+d:Ge/TargetCopperSection/HLY      = 5 cm
+d:Ge/TargetCopperSection/HLZ      = 0.0889 cm   # Half Length
+d:Ge/TargetCopperSection/TransX   = 0.0 m 
+d:Ge/TargetCopperSection/TransY   = 0.0 m 
+d:Ge/TargetCopperSection/TransZ   = 0.7993 * Ge/World/HLZ m  
+d:Ge/TargetCopperSection/RotX     = 0.0 deg
+d:Ge/TargetCopperSection/RotY     = 0.0 deg
+d:Ge/TargetCopperSection/RotZ     = 0.0 deg 
+s:Ge/TargetCopperSection/Color    = "orange"
+##################################################################
+##################################################################
+#-------------------- PRIMARY COLLIMATOR ------------------------#
+s:Ge/PrimaryCollimator/Parent   = "World"
+s:Ge/PrimaryCollimator/Type     = "TsBox"
+s:Ge/PrimaryCollimator/Material ="Tungsten"
+d:Ge/PrimaryCollimator/HLX      = 5 cm        # Half Length
+d:Ge/PrimaryCollimator/HLY      = 5 cm
+d:Ge/PrimaryCollimator/HLZ      = 4.5720 cm   # Half Length
+d:Ge/PrimaryCollimator/TransX   = 0.0 m
+d:Ge/PrimaryCollimator/TransY   = 0.0 m
+d:Ge/PrimaryCollimator/TransZ   = 0.7759 * Ge/World/HLZ m
+d:Ge/PrimaryCollimator/RotX     = 0.0 deg
+d:Ge/PrimaryCollimator/RotY     = 0.0 deg
+d:Ge/PrimaryCollimator/RotZ     = 0.0 deg
+s:Ge/PrimaryCollimator/Color    = "brown"
+b:Ge/PrimaryCollimator/Invisible = "False"
+##################################################################
+#----------- AIR TRUNCATED CONE INSIDE PRIMARY COLLIMATOR -------#
+# ALPHA = 0.244346 rad    Semi-Cone Aperture 
+# H1 = 2.032 cm           Truncated Cone Start 
+# H  = 11.176 cm          Cone height
+# H2 = 9.1440 cm          Truncated Cone heigth 
+# RMAX1 = H1*tan(ALPHA)   Radius at cone end
+# RMAX2 = H *tan(ALPHA)   Radius at cone start 
+s:Ge/AirCone/Type = "G4Cons"
+s:Ge/AirCone/Parent = "PrimaryCollimator"
+s:Ge/AirCone/Material = "Air"
+d:Ge/AirCone/TransZ = 0.0 m    
+d:Ge/AirCone/RMax2 = 0.5066 cm
+d:Ge/AirCone/RMax1 = 2.7865 cm
+d:Ge/AirCone/HL = 4.5720 cm
+s:Ge/AirCone/Color = "red"
+s:Ge/AirCone/DrawingStyle = "FullWireFrame"
+##################################################################
+#--------------- FLATTENING FILTER ------------------------------#
+#-------------- Conical Section ---------------------------------
+s:Ge/FlatteningFilterConicalSection/Type = "G4SPolycone"
+s:Ge/FlatteningFilterConicalSection/Parent = "AirCone"
+s:Ge/FlatteningFilterConicalSection/Material = "Tantalum"
+d:Ge/FlatteningFilterConicalSection/TransZ = 0.2130 cm
+# dv:Ge/FlatteningFilterConicalSection/R = 14  .0   .50  .100 .200 .300 .400 .500 .600 .700 .800 .900 .960 1.040 1.250 cm
+# dv:Ge/FlatteningFilterConicalSection/Z = 14  .554 .543 .520 .459 .393 .329 .267 .209 .157 .113 .066 .048  .048  .128 cm
+dv:Ge/FlatteningFilterConicalSection/R = 9  .0   .50  .100 .200 .300 .400 .500 .600 .700 cm 
+dv:Ge/FlatteningFilterConicalSection/Z = 9  .554 .543 .520 .459 .393 .329 .267 .209 .157 cm 
+s:Ge/FlatteningFilterConicalSection/Color = "blue"
+s:Ge/FlatteningFilterConicalSection/DrawingStyle = "FullWireFrame"
+b:Ge/FlatteningFilterConicalSection/Invisible = "False"
+
+
+##################################################################
+##################################################################
+#-------------- THIN SLAB ABOVE WATER PHANTOM -------------------#
+s:Ge/PhotonFluenceSlab/Parent = "World"
+s:Ge/PhotonFluenceSlab/Type = "TsBox"
+s:Ge/PhotonFluenceSlab/Material="Water"
+d:Ge/PhotonFluenceSlab/HLX=20 cm # Half Length
+d:Ge/PhotonFluenceSlab/HLY=20 cm
+d:Ge/PhotonFluenceSlab/HLZ=0.2 cm
+d:Ge/PhotonFluenceSlab/TransX=0.0 m # defaults to 0
+d:Ge/PhotonFluenceSlab/TransY=0.0 m # defaults to 0
+d:Ge/PhotonFluenceSlab/TransZ= 105.2 cm           
+d:Ge/PhotonFluenceSlab/RotX=0.0 deg # defaults to 0
+d:Ge/PhotonFluenceSlab/RotY=0.0 deg # defaults to 0
+d:Ge/PhotonFluenceSlab/RotZ=0.0 deg # defaults to 0
+s:Ge/PhotonFluenceSlab/Color="magenta"
+#---------------------------------------------------------------
+#------------- PRIMARY PHOTON FLUENCE SCORER -------------------
+s:Sc/PrimaryPhotonFluenceScorer/Quantity    = "Fluence"
+sv:Sc/PrimaryPhotonFluenceScorer/Report     = 1 "Count_in_bin" 
+s:Sc/PrimaryPhotonFluenceScorer/Component   = "PhotonFluenceSlab"
+b:Sc/PrimaryPhotonFluenceScorer/OutputToConsole = "False"
+s:Sc/PrimaryPhotonFluenceScorer/OutputType = "csv"
+s:Sc/PrimaryPhotonFluenceScorer/IfOutputFileAlreadyExists = "Overwrite"
+i:Sc/PrimaryPhotonFluenceScorer/EBins = 100
+sv:Sc/PrimaryPhotonFluenceScorer/OnlyIncludeParticlesNamed = 1 "gamma"
+sv:Sc/PrimaryPhotonFluenceScorer/OnlyIncludeParticlesFromProcess = 1 "eBrem"
+sv:Sc/PrimaryPhotonFluenceScorer/OnlyIncludeParticlesFromVolume = 1 "TargetTungstenSection"
+d:Sc/PrimaryPhotonFluenceScorer/EBinMin = 0. MeV
+d:Sc/PrimaryPhotonFluenceScorer/EBinMax = 6. MeV
+#---------------------------------------------------------------
+#-------------- SECONDARY PHOTON FLUENCE SCORER ----------------
+s:Sc/SecondaryPhotonFluenceScorer/Quantity        = "Fluence"
+sv:Sc/SecondaryPhotonFluenceScorer/Report         = 1 "Count_in_bin" 
+s:Sc/SecondaryPhotonFluenceScorer/Component       = "PhotonFluenceSlab"
+b:Sc/SecondaryPhotonFluenceScorer/OutputToConsole = "False"
+s:Sc/SecondaryPhotonFluenceScorer/OutputType = "csv"
+s:Sc/SecondaryPhotonFluenceScorer/IfOutputFileAlreadyExists = "Overwrite"
+i:Sc/SecondaryPhotonFluenceScorer/EBins = 100
+sv:Sc/SecondaryPhotonFluenceScorer/OnlyIncludeParticlesNamed = 1 "gamma"
+s:Sc/SecondaryPhotonFluenceScorer/OnlyIncludeParticlesOfGeneration = "secondary"
+sv:Sc/SecondaryPhotonFluenceScorer/OnlyIncludeParticlesNotFromComponent = 1 "Phantom"
+d:Sc/SecondaryPhotonFluenceScorer/EBinMin = 0. MeV
+d:Sc/SecondaryPhotonFluenceScorer/EBinMax = 6. MeV
+##################################################################
+##################################################################
+#-------------------- WATER PHANTOm -----------------------------#
+s:Ge/Phantom/Parent="World"
+s:Ge/Phantom/Type="TsBox"
+s:Ge/Phantom/Material="Water"
+d:Ge/Phantom/HLX=20.0 cm
+d:Ge/Phantom/HLY=20.0 cm
+d:Ge/Phantom/HLZ=5.0 cm
+d:Ge/Phantom/TransZ= 100. cm
+s:Ge/Phantom/Color="blue"
+
+#-------------------- PDD Cylinder inside Phantom ----------------------------
+s:Ge/PDDCylinder/Parent                    = "Phantom"
+s:Ge/PDDCylinder/Type                      = "TsCylinder"
+s:Ge/PDDCylinder/Material                  = "Water"
+d:Ge/PDDCylinder/RMin                      = 0.0 cm
+d:Ge/PDDCylinder/RMax                      = 3.0 cm
+d:Ge/PDDCylinder/HL                        = Ge/Phantom/HLZ cm  # same height as phantom
+d:Ge/PDDCylinder/SPhi                      = 0. deg
+d:Ge/PDDCylinder/DPhi                      = 360. deg
+d:Ge/PDDCylinder/TransX                    = 0. cm
+d:Ge/PDDCylinder/TransY                    = 0. cm
+d:Ge/PDDCylinder/TransZ                    = 0. cm
+d:Ge/PDDCylinder/RotX                      = 0. deg
+d:Ge/PDDCylinder/RotY                      = 0.0 deg
+d:Ge/PDDCylinder/RotZ                      = 180. deg
+s:Ge/PDDCylinder/Color                     = "yellow"
+i:Ge/PDDCylinder/RBins                     = 1
+i:Ge/PDDCylinder/PhiBins                   = 1
+i:Ge/PDDCylinder/ZBins                     = 50
+s:Sc/PDDCylinder/Quantity                  = "DoseToWater"
+sv:Sc/PDDCylinder/Report                   = 2 "Mean" "Standard_Deviation" 
+s:Sc/PDDCylinder/Component                 = "PDDCylinder"
+b:Sc/PDDCylinder/OutputToConsole           = "False"
+s:Sc/PDDCylinder/IfOutputFileAlreadyExists = "Overwrite"
+
+#-------------------- Scores in a parallel world ------------------------
+s:Sc/DoseAtPhantom/Quantity                  = "DoseToWater"
+sv:Sc/DoseAtPhantom/Report                   = 2 "Mean" "Standard_Deviation"
+s:Sc/DoseAtPhantom/Component                 = "Phantom"
+s:Sc/DoseAtPhantom/IfOutputFileAlreadyExists = "Overwrite"
+b:Sc/DoseAtPhantom/OutputToConsole           = "False"
+i:Sc/DoseAtPhantom/XBins                     = 20        # X_binning
+i:Sc/DoseAtPhantom/YBins                     = 20        # Y_binning
+i:Sc/DoseAtPhantom/ZBins                     = 5         # Z_binning
+
+#-------------------- Transport details -------------------------------
+i:So/Default/NumberOfHistoriesInRun = 10
+i:Ts/NumberOfThreads = 0 # use all computer h/w cores virtual cores 
+Ge/QuitIfOverlapDetected = "False"
+
+#-------------------- Visualization -----------------------------------
+s:Gr/ViewA/Type = "OpenGL"
+i:Gr/ViewA/WindowSizeX = 1500
+i:Gr/ViewA/WindowSizeY = 1500
+u:Gr/ViewA/TransX = -0.8 # move left or right in the view window
+u:Gr/ViewA/TransY = -0.45 # move up or down in the view window
+d:Gr/ViewA/Theta = 80 deg
+d:Gr/ViewA/Phi = 10 deg
+s:Gr/ViewA/Projection = "Perspective"
+d:Gr/ViewA/PerspectiveAngle = 20 deg
+u:Gr/ViewA/Zoom = 8.0
+b:Gr/ViewA/HiddenLineRemovalForTrajectories = "True"
+sv:Gr/ViewA/VisibleWorlds = 1 "All"
+b:Gr/ViewA/IncludeAxes = "True" # defaults to "False"
+s:Gr/ViewA/AxesComponent = "World" # Component in which to center the axes.
+d:Gr/ViewA/AxesSize = 1.5 m
+Ts/PauseBeforeQuit = "True"
+s:Ma/DefaultColor="brown"
+i:Ma/Verbosity = 1 # Set to 1 to report each time a material is defined
+
+

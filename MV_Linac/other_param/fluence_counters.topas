@@ -1,0 +1,46 @@
+
+#-------------- THIN SLAB ABOVE WATER PHANTOM -------------------#
+s:Ge/PhotonFluenceSlab/Parent = "World"
+s:Ge/PhotonFluenceSlab/Type = "TsBox"
+s:Ge/PhotonFluenceSlab/Material="Air"
+d:Ge/PhotonFluenceSlab/HLX= 20 cm # Half Length of phantom
+d:Ge/PhotonFluenceSlab/HLY= 20 cm
+d:Ge/PhotonFluenceSlab/HLZ=0.1 cm
+d:Ge/PhotonFluenceSlab/TransX=0.0 m # defaults to 0
+d:Ge/PhotonFluenceSlab/TransY=0.0 m # defaults to 0
+d:Ge/PhotonFluenceSlab/TransZ= 0.1 cm           
+d:Ge/PhotonFluenceSlab/RotX=0.0 deg # defaults to 0
+d:Ge/PhotonFluenceSlab/RotY=0.0 deg # defaults to 0
+d:Ge/PhotonFluenceSlab/RotZ=0.0 deg # defaults to 0
+s:Ge/PhotonFluenceSlab/Color="magenta"
+
+#---------------------------------------------------------------
+#------------- PRIMARY PHOTON FLUENCE SCORER -------------------
+s:Sc/PrimaryPhotonFluenceScorer/Quantity    = "Fluence"
+sv:Sc/PrimaryPhotonFluenceScorer/Report     = 1 "Count_in_bin" 
+s:Sc/PrimaryPhotonFluenceScorer/Component   = "PhotonFluenceSlab"
+b:Sc/PrimaryPhotonFluenceScorer/OutputToConsole = "False"
+s:Sc/PrimaryPhotonFluenceScorer/OutputType = "csv"
+s:Sc/PrimaryPhotonFluenceScorer/IfOutputFileAlreadyExists = "Increment"
+i:Sc/PrimaryPhotonFluenceScorer/EBins = 100
+sv:Sc/PrimaryPhotonFluenceScorer/OnlyIncludeParticlesNamed = 1 "gamma"
+sv:Sc/PrimaryPhotonFluenceScorer/OnlyIncludeParticlesFromProcess = 1 "eBrem"
+sv:Sc/PrimaryPhotonFluenceScorer/OnlyIncludeParticlesFromVolume = 1 "TargetTungstenSection"
+d:Sc/PrimaryPhotonFluenceScorer/EBinMin = 0. MeV
+d:Sc/PrimaryPhotonFluenceScorer/EBinMax = 6. MeV
+
+#---------------------------------------------------------------
+#-------------- SECONDARY PHOTON FLUENCE SCORER ----------------
+s:Sc/SecondaryPhotonFluenceScorer/Quantity        = "Fluence"
+sv:Sc/SecondaryPhotonFluenceScorer/Report         = 1 "Count_in_bin" 
+s:Sc/SecondaryPhotonFluenceScorer/Component       = "PhotonFluenceSlab"
+b:Sc/SecondaryPhotonFluenceScorer/OutputToConsole = "False"
+s:Sc/SecondaryPhotonFluenceScorer/OutputType = "csv"
+s:Sc/SecondaryPhotonFluenceScorer/IfOutputFileAlreadyExists = "Increment"
+i:Sc/SecondaryPhotonFluenceScorer/EBins = 100
+sv:Sc/SecondaryPhotonFluenceScorer/OnlyIncludeParticlesNamed = 1 "gamma"
+s:Sc/SecondaryPhotonFluenceScorer/OnlyIncludeParticlesOfGeneration = "secondary"
+sv:Sc/SecondaryPhotonFluenceScorer/OnlyIncludeParticlesNotFromComponent = 1 "Phantom"
+d:Sc/SecondaryPhotonFluenceScorer/EBinMin = 0. MeV
+d:Sc/SecondaryPhotonFluenceScorer/EBinMax = 6. MeV
+

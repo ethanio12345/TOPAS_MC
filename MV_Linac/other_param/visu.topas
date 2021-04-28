@@ -1,0 +1,19 @@
+s:Gr/ViewA/Type = "OpenGL"
+i:Gr/ViewA/WindowSizeX = 1500
+i:Gr/ViewA/WindowSizeY = 900
+u:Gr/ViewA/TransX = 0 # move left or right in the view window
+u:Gr/ViewA/TransY = 0 # move up or down in the view window
+d:Gr/ViewA/Theta = 800 deg
+d:Gr/ViewA/Phi = 20 deg
+s:Gr/ViewA/Projection = "Perspective"
+d:Gr/ViewA/PerspectiveAngle = 20 deg
+#u:Gr/ViewA/Zoom = 1.5
+b:Gr/ViewA/HiddenLineRemovalForTrajectories = "True"
+sv:Gr/ViewA/VisibleWorlds = 1 "All"
+
+s:Gr/MyGraphic1/AxesComponent = "World" 
+
+b:Gr/ViewA/CopyOpenGLToPDF = "True"
+s:Gr/ViewA/FileName = "Linac_Visualisation_first"
+
+

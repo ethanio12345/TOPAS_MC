@@ -1,0 +1,30 @@
+
+#-------------------- PDD Cylinder inside Phantom ----------------------------
+
+s:Ge/PDDCylinder/Parent                    = "Phantom"
+s:Ge/PDDCylinder/Type                      = "TsCylinder"
+b:Ge/PDDCylinder/IsParallel 		   	   = "True"
+
+d:Ge/PDDCylinder/RMin                      = 0.0 cm
+d:Ge/PDDCylinder/RMax                      = 3.0 cm
+d:Ge/PDDCylinder/HL                        = 15 cm  # same height as phantom
+d:Ge/PDDCylinder/SPhi                      = 0. deg
+d:Ge/PDDCylinder/DPhi                      = 360. deg
+d:Ge/PDDCylinder/TransX                    = 0. cm
+d:Ge/PDDCylinder/TransY                    = 0. cm
+d:Ge/PDDCylinder/TransZ                    = 0 cm
+d:Ge/PDDCylinder/RotX                      = 0. deg
+d:Ge/PDDCylinder/RotY                      = 0. deg
+d:Ge/PDDCylinder/RotZ                      = 0. deg
+s:Ge/PDDCylinder/Color                     = "yellow"
+i:Ge/PDDCylinder/RBins                     = 1
+i:Ge/PDDCylinder/PhiBins                   = 1
+i:Ge/PDDCylinder/ZBins                     = 600
+s:Sc/PDDCylinder/Quantity                  = "DoseToMedium"
+sv:Sc/PDDCylinder/Report                   = 2 "Sum" "Count_In_Bin"
+s:Sc/PDDCylinder/Component                 = "PDDCylinder"
+b:Sc/PDDCylinder/OutputToConsole           = "False"
+s:Sc/PDDCylinder/OutputFile		    = "PDDCyl_SAD_5.8MeV_0spread"
+s:Sc/PDDCylinder/IfOutputFileAlreadyExists = "Increment"
+
+s:Ge/PDDCylinder/ParallelWorldName         = "PDDCyl"

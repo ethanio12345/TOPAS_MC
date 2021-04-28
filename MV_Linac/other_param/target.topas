@@ -1,0 +1,51 @@
+s:Ge/Target/Type = "Group"
+
+s:Ge/Target/Parent = "World"
+d:Ge/Target/TransZ = 100 cm
+
+#Target sections offset so 100cm is top of W section
+#Need to set materials in Target as parallel so to not overlap with VacSphere otherwise electrons travel right through target
+
+
+#----------------Tungsten section -------------------------------#
+
+s:Ge/TargetTungstenSection/Parent   = "Target"
+s:Ge/TargetTungstenSection/Type     = "TsBox"
+s:Ge/TargetTungstenSection/Material ="G4_W"
+d:Ge/TargetTungstenSection/HLX      = 1 cm        # Half Length
+d:Ge/TargetTungstenSection/HLY      = 1 cm
+d:Ge/TargetTungstenSection/HLZ      = 0.0508 cm   # Half Length
+d:Ge/TargetTungstenSection/TransX   = 0.0 m 
+d:Ge/TargetTungstenSection/TransY   = 0.0 m 
+d:Ge/TargetTungstenSection/TransZ   = -0.0508 cm  
+#d:Ge/TargetTungstenSection/TransZ   = 99.9492 cm  
+d:Ge/TargetTungstenSection/RotX     = 0.0 deg
+d:Ge/TargetTungstenSection/RotY     = 0.0 deg
+d:Ge/TargetTungstenSection/RotZ     = 0.0 deg 
+s:Ge/TargetTungstenSection/Color    = "brown"
+
+s:Ge/TargetTungstenSection/AssignToRegionNamed = "TargetRegion"
+
+b:Ge/TargetTungstenSection/IsParallel = "True"
+s:Ge/TargetTungstenSection/ParallelWorldName = "Target"
+
+#----------------Copper section -------------------------------#
+#
+s:Ge/TargetCopperSection/Parent   = "Target"
+s:Ge/TargetCopperSection/Type     = "TsBox"
+s:Ge/TargetCopperSection/Material ="G4_Cu"
+d:Ge/TargetCopperSection/HLX      = 1 cm        # Half Length
+d:Ge/TargetCopperSection/HLY      = 1 cm
+d:Ge/TargetCopperSection/HLZ      = 0.0889 cm   # Half Length
+d:Ge/TargetCopperSection/TransX   = 0.0 m 
+d:Ge/TargetCopperSection/TransY   = 0.0 m 
+d:Ge/TargetCopperSection/TransZ   = -0.2286 cm
+d:Ge/TargetCopperSection/RotX     = 0.0 deg
+d:Ge/TargetCopperSection/RotY     = 0.0 deg
+d:Ge/TargetCopperSection/RotZ     = 0.0 deg 
+s:Ge/TargetCopperSection/Color    = "orange"
+
+s:Ge/TargetCopperSection/AssignToRegionNamed = "TargetRegion"
+
+b:Ge/TargetCopperSection/IsParallel = "True"
+s:Ge/TargetCopperSection/ParallelWorldName = "Target"

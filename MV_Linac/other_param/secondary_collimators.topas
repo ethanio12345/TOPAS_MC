@@ -1,0 +1,88 @@
+##################################################################
+##################################################################
+
+d:col_angle = 2.862405  deg
+
+d:x_dist_col = 12.25 cm
+
+
+#-------------------- SECONDARY COLLIMATOR - X1 ------------------------#
+
+s:Ge/SecondaryCollimatorX1/Parent   = "World"
+s:Ge/SecondaryCollimatorX1/Type     = "TsBox"
+s:Ge/SecondaryCollimatorX1/Material ="G4_W"
+d:Ge/SecondaryCollimatorX1/HLX      = 10 cm        # Half Length
+d:Ge/SecondaryCollimatorX1/HLY      = 10 cm
+d:Ge/SecondaryCollimatorX1/HLZ      = 3.4 cm   # Half Length
+d:Ge/SecondaryCollimatorX1/TransX   = x_dist_col cm
+d:Ge/SecondaryCollimatorX1/TransY   = 0.0 m
+d:Ge/SecondaryCollimatorX1/TransZ   = 45 cm
+d:Ge/SecondaryCollimatorX1/RotX     = 0.0 deg
+d:Ge/SecondaryCollimatorX1/RotY     = col_angle deg
+d:Ge/SecondaryCollimatorX1/RotZ     = 0.0 deg
+s:Ge/SecondaryCollimatorX1/Color    = "brown"
+b:Ge/SecondaryCollimatorX1/Invisible = "False"
+s:Ge/SecondaryCollimatorX1/DrawingStyle = "Solid"
+
+#-------------------- SECONDARY COLLIMATOR - X2 ------------------------#
+
+s:Ge/SecondaryCollimatorX2/Parent   = "World"
+s:Ge/SecondaryCollimatorX2/Type     = "TsBox"
+s:Ge/SecondaryCollimatorX2/Material ="G4_W"
+d:Ge/SecondaryCollimatorX2/HLX      = 10 cm        # Half Length
+d:Ge/SecondaryCollimatorX2/HLY      = 10 cm
+d:Ge/SecondaryCollimatorX2/HLZ      = 3.4 cm   # Half Length
+d:Ge/SecondaryCollimatorX2/TransX   = -1 * x_dist_col cm
+d:Ge/SecondaryCollimatorX2/TransY   = 0.0 m
+d:Ge/SecondaryCollimatorX2/TransZ   = 45 cm
+d:Ge/SecondaryCollimatorX2/RotX     = 0.0  deg
+d:Ge/SecondaryCollimatorX2/RotY     = -1 * col_angle deg
+d:Ge/SecondaryCollimatorX2/RotZ     = 0.0 deg
+s:Ge/SecondaryCollimatorX2/Color    = "brown"
+b:Ge/SecondaryCollimatorX2/Invisible = "False"
+s:Ge/SecondaryCollimatorX2/DrawingStyle = "Solid"
+
+
+
+##################################################################
+##################################################################
+
+d:y_dist_col = 12.75 cm
+
+
+#-------------------- SECONDARY COLLIMATOR - Y1 ------------------------#
+
+s:Ge/SecondaryCollimatorY1/Parent   = "World"
+s:Ge/SecondaryCollimatorY1/Type     = "TsBox"
+s:Ge/SecondaryCollimatorY1/Material ="G4_W"
+d:Ge/SecondaryCollimatorY1/HLX      = 10 cm        # Half Length
+d:Ge/SecondaryCollimatorY1/HLY      = 10 cm
+d:Ge/SecondaryCollimatorY1/HLZ      = 3.4 cm   # Half Length
+d:Ge/SecondaryCollimatorY1/TransX   = 0.0 cm
+d:Ge/SecondaryCollimatorY1/TransY   = y_dist_col cm
+d:Ge/SecondaryCollimatorY1/TransZ   = 55 cm
+d:Ge/SecondaryCollimatorY1/RotX     = -1 * col_angle deg
+d:Ge/SecondaryCollimatorY1/RotY     = 0.0  deg
+d:Ge/SecondaryCollimatorY1/RotZ     = 0.0 deg
+s:Ge/SecondaryCollimatorY1/Color    = "brown"
+b:Ge/SecondaryCollimatorY1/Invisible = "False"
+s:Ge/SecondaryCollimatorY1/DrawingStyle = "Solid"
+
+#-------------------- SECONDARY COLLIMATOR - Y2 ------------------------#
+
+s:Ge/SecondaryCollimatorY2/Parent   = "World"
+s:Ge/SecondaryCollimatorY2/Type     = "TsBox"
+s:Ge/SecondaryCollimatorY2/Material ="G4_W"
+d:Ge/SecondaryCollimatorY2/HLX      = 10 cm        # Half Length
+d:Ge/SecondaryCollimatorY2/HLY      = 10 cm
+d:Ge/SecondaryCollimatorY2/HLZ      = 3.4 cm   # Half Length
+d:Ge/SecondaryCollimatorY2/TransX   = 0.0 cm
+d:Ge/SecondaryCollimatorY2/TransY   = -1 * y_dist_col cm
+d:Ge/SecondaryCollimatorY2/TransZ   = 55 cm
+d:Ge/SecondaryCollimatorY2/RotX     = col_angle deg
+d:Ge/SecondaryCollimatorY2/RotY     = 0.0  deg
+d:Ge/SecondaryCollimatorY2/RotZ     = 0.0 deg
+s:Ge/SecondaryCollimatorY2/Color    = "brown"
+b:Ge/SecondaryCollimatorY2/Invisible = "False"
+s:Ge/SecondaryCollimatorY2/DrawingStyle = "Solid"
+

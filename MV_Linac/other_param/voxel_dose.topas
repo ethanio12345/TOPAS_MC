@@ -1,0 +1,8 @@
+s:Sc/DoseAtPhantom/Quantity                  = "DoseToWater"
+sv:Sc/DoseAtPhantom/Report                   = 2 "Mean" "Standard_Deviation"
+s:Sc/DoseAtPhantom/Component                 = "Phantom"
+s:Sc/DoseAtPhantom/IfOutputFileAlreadyExists = "Increment"
+b:Sc/DoseAtPhantom/OutputToConsole           = "False"
+i:Sc/DoseAtPhantom/XBins                     = 30       # X_binning
+i:Sc/DoseAtPhantom/YBins                     = 30        # Y_binning
+i:Sc/DoseAtPhantom/ZBins                     = 10         # Z_binning
